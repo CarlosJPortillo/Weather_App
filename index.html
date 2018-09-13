@@ -1,0 +1,67 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta charset="utf-8">
+		<script type = "text/javascript" src = "hw5_functions.js"> </script>
+	    <!--viewport is essentially user's screen and the two settings, width uses width of screen intial
+		scale means don't zoom in or zoom out, just use regular zoom consistent across every page-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		
+		<!-- map style div attributes for page -->
+		<style>
+      #map {
+            height: 300px;
+			position: relative;
+			margin-top: 20px;
+			margin-left: 20px;
+			margin-right: 20px;
+
+      }
+	  
+	  .info {
+		font-weight:bold;
+		padding-left: 13px;
+
+	  
+	  }
+
+	  #map_container{
+		position: relative;
+	   }
+
+    </style>
+		
+	</head>
+
+		<body onload = "Initialize()">
+			 <div id = "map_container"> <div id = "map"></div></div>
+			 </br>
+			 <div class = "container-fluid">
+	         <div class= "row">
+				<div class = "col-md-1"></div>
+				<!--taking the width of 4 columns-->
+		        <div class = "col-md-3" style=" height:170px;" id = "conditions">
+				<!--hidden header-->
+				<h3 class = "info" style = "visibility: hidden;" id = "currentConditionsHeader"> 
+				Current Weather Conditions </h3>
+				<!--City-->
+				<div id = "city_info" class = "info" ></div>
+				<div id = "conditions_info" class = "info"></div>
+				<img id = "icon" class = "info"></img></div>
+		        <div class = "col-md-8" id = "tenDay">
+				<h3 style = "visibility: hidden; padding-left: 50px; font-weight: bold;" id = "TenDayHeader">
+				Ten Day Forecast </h3>
+				<!--10 day forecaste div-->
+				<div id = "tenDayForecast" style = "font-weight:bold"></div>
+				</div>
+	         </div>
+			 </div>
+		    
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiLV8WEOgJsHQGzh0tgiGZeXVaz5b7XQc"
+			async defer></script>
+		</body>
+</html>
