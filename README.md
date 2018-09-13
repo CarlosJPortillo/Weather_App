@@ -1,2 +1,2 @@
 # Weather_App
-This is an app that integrates Google Maps API and the Wunderground Weather API to display weather conditions for a specified location.
+This is an app that integrates Google Maps API and the Wunderground Weather API to display weather conditions for a specified location. It first uses the Geolocation API to get your current location. Using that locaiton it displays a Google maps widget relative to your current location. The map has a click event listener, where it displays the daily forecast with weather/conditions, as well as the next 10 days of weather and conditions. 
